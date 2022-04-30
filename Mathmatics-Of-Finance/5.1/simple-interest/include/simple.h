@@ -1,22 +1,16 @@
-#ifndef SIMPLE_INTEREST
-#define SIMPLE_INTEREST
+#pragma once
 
 #include <iostream>
 
 class Simple
 {
   public:
-    SimpleInterest(double rate);
-    void calculateInterest(const double& amount);
-    ~SimpleInterest();
-
-  private:
-    double m_rate;
-    double m_amount;
+    void show_definition();
+    void show_formula();
+    //void calculateInterest(const double& amount);
+    Simple();
+    ~Simple();
 };
 
-#endif
-
 /* By default all members of a class is Private
- *
  * */
