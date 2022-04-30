@@ -17,6 +17,17 @@ Simple::Simple()
   cout << "Default Constructor" << endl;
 }
 
+Simple::Simple(int a)
+{
+  pv = a;
+  cout << "Default Constructor: " << pv << endl;
+}
+
+Simple::Simple(int a, int b)
+{
+  cout << "Default Constructor" << endl;
+}
+
 Simple::~Simple()
 {
   cout << "Destructor" << endl;
