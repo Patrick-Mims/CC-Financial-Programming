@@ -1,14 +1,22 @@
 cmake_minimum_required(VERSION 3.22.20211116-g49c870b)
 project(main VERSION 1.0 LANGUAGES CXX)
 
+include(FetchContent)
+FetchContent_Declare(
+    googletest
+    URL https://github.com/google/googletest/archive/609281088cfefc76f9d0ce82e1ff6c30cc3591e5.zip
+  )
+
+FetchContent_MakeAvailable(googletest)
+
 include_directories(include)
 
 file(GLOB SOURCES "src/*.cc")
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED FALSE)
-#set(CMAKE_BUILD_TYPE debug)
-#set(CMAKE_CXX_EXTENSIONS NO)
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_EXTENSIONS NO)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
